@@ -35,7 +35,7 @@ func getcovidcases(cname string) []CovidData {
 	req, _ := http.NewRequest("GET", url, nil)
 
 	req.Header.Add("x-rapidapi-host", "covid1910.p.rapidapi.com")
-	req.Header.Add("x-rapidapi-key", "1a76ca5476msh3925d740f2910e5p1a25f7jsn0013a8934bc6")
+	req.Header.Add("x-rapidapi-key", "KEYGOESHERE")
 
 	res, _ := http.DefaultClient.Do(req)
 
@@ -53,6 +53,7 @@ func getcovidcases(cname string) []CovidData {
 		fmt.Fprintln(w, strconv.Itoa(int(data[0].Provinces[0].Recovered)))
 		fmt.Fprintf(w, "Number of Deaths: ")
 		fmt.Fprintln(w, strconv.Itoa(int(data[0].Provinces[0].Deaths)))*/
+	//1a76ca5476msh3925d740f2910e5p1a25f7jsn0013a8934bc6
 }
 
 //gets the country population bases on the cname and returns the population with CountryPopulation type
